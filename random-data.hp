@@ -1,0 +1,35 @@
+get http://uifaces.com | jq .face-action @ :data-source | set avatars;
+alias get-random-avatar = $avatars | randomChoice;
+
+alias fetch-random-quote = get https://andruxnet-random-famous-quotes.p.mashape.com/cat=movies {
+    'X-Mashape-Key': 'vQQgf4pDitmsh4hiAAfXyfvgfXRVp10mqYujsnFD0ibnKy4rqd'
+};
+
+alias get-random-quote = $quotes | randomChoice;
+alias get-random-name = $names | randomChoice;
+
+alias get-random-message = {
+    body: get-random-quote,
+    user: {
+        name: get-random-name,
+        avatar: get-random-avatar
+    },
+    comments: get-random-comments $( randint 1 )
+} | log;
+alias get-random-messages = range 0 || get-random-message;
+
+alias get-random-comment = {
+    body: get-random-quote,
+    user: {
+        name: get-random-name,
+        avatar: get-random-avatar
+    },
+    time: val $( timestamp | - $( randint 1000 | * 1000 ) )
+};
+alias get-random-comments = range 0 || get-random-comment;
+
+cat "~/names.json" | parse | set names;
+cat "~/quotes.json" | parse | set quotes;
+
+echo Going?
+

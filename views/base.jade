@@ -1,0 +1,113 @@
+doctype html
+html
+    head
+        title pawel feed page
+
+        link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/css/bootstrap.min.css')
+        link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css')
+        link(href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,600,300', rel='stylesheet', type='text/css')
+        link(rel='stylesheet', href='/css/base.css')
+
+    body
+        #navigation.navbar.navbar-inverse.navbar-fixed-top
+            .container-fluid
+                .navbar-header
+                    a.navbar-brand C
+
+                .navbar-collapse.collapse
+                    ul.nav.navbar-nav
+                        li.dropdown
+                            a(href='#') Circles
+                                i.drop.fa.fa-angle-down
+                    ul.nav.navbar-nav
+                        li: span Add
+                        li: a(href='#'): i.fa.fa-photo
+                        li: a(href='#'): i.fa.fa-film
+                        li: a(href='#'): i.fa.fa-calendar
+                    ul.nav.navbar-nav
+                        li: span View
+                        li: a(href='#'): i.fa.fa-photo
+                        li: a(href='#'): i.fa.fa-film
+
+        .container-fluid
+            .row
+
+                #main.col-md-9
+                    .alert.alert-warning
+                        a.close: &times;
+                        i.fa.fa-info-circle
+                        span Did you know that you can get an email when someone posts or replies? 
+                            a Change your preferences
+
+                    #new-message
+                        .box
+                            input.form-control(type="text", placeholder="Post new message to this circle...")
+
+                    #messages
+
+                        .message.unread.box
+
+                            .main
+                                .actions
+                                    a.comment
+                                        i.fa.fa-comment-o
+                                        span Comment
+
+                                img.avatar(src="/users/random/avatar.jpg")
+                                .details
+                                    span.name Gabin McCoy
+                                    span.time posted this 4 minutes ago
+                                
+                                .body
+                                    p I continue cooking, you and I both forget about Pinkman. We forget this ever happened.
+
+                            .comments
+                                .new-comment
+                                    input.form-control(type="text", placeholder="Post a comment...")
+                                .comment
+                                    img.avatar(src='http://avc.com/wp-content/uploads/2014/01/freds-avatar.jpg')
+                                    .details
+                                        span.name Gabin McCoy
+                                        span.body I continue cooking, you and I both forget about Pinkman. We forget this ever happened.
+                                        span.time posted this 4 minutes ago
+
+                #sidebar.col-md-3
+                    h2 Recent Activity
+                    .activity.item
+                        img.avatar(src='http://avc.com/wp-content/uploads/2014/01/freds-avatar.jpg')
+                        .summary
+                            span.name Gabin McCoy 
+                            span.description commented on something you wrote.
+                            span.time 4 minutes ago 
+
+                    h2 Circle Members
+                    .person.item
+                        img.avatar(src='http://avc.com/wp-content/uploads/2014/01/freds-avatar.jpg')
+                        .summary
+                            span.name Gabin McCoy 
+                            span.joined Joined 3 days ago
+                    .person.item
+                        img.avatar(src='http://avc.com/wp-content/uploads/2014/01/freds-avatar.jpg')
+                        .summary
+                            span.name Andresso McCoy 
+                            span.joined Last seen 3 days ago
+
+        #footer.container-fluid
+            | Content and graphics copyright 2005-2014 
+            a(href='#') Something.com
+            | . All rights reserved.
+
+    script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/bacon.js/0.7.22/Bacon.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/react/0.12.0/react.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/react/0.12.0/JSXTransformer.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.3/moment.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js')
+    script(src='/socket.io/socket.io.js')
+    script(src='/js/somata-socketio.js')
+    script(src='/js/cortex.js')
+    script(src='/js/helpers.js')
+
+    script(type='text/jsx', src='/js/base.js')

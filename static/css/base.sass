@@ -1,0 +1,232 @@
+body
+    font-family: "Source Sans Pro"
+    background: #151515
+
+input, button
+    font-family: "Source Sans Pro"
+
+div[class*="col-md-"]
+    padding: 20px 30px 30px
+
+#main
+    padding-top: 90px
+    min-height: 100%
+    background: #f8f8f8
+
+// Navbar
+// ------------------------------------------------------------------------------
+
+.navbar
+    border: none
+    border-radius: 0
+
+.navbar-inverse .navbar-brand
+    background: #8ec2b3 !important
+    color: #fff
+    padding: 20px 25px
+    font-size: 30px
+    height: auto
+
+.dropdown i.drop
+    padding-left: 10px
+
+.nav>li>a,
+.nav>li>span
+    display: block
+    padding: 20px 10px
+
+.nav>li>a
+    color: #666
+.nav>li>span
+    color: #666
+
+.nav>li:first-child>*
+    padding-left: 20px
+
+.nav>li:last-child>*
+    padding-right: 20px
+
+.nav + .nav
+    border-left: 1px solid #333
+
+.box
+    background: #fff
+    box-shadow: 0 2px 1px #e6e6e6
+    border-radius: 2px
+
+.alert>i
+    margin-right: 10px
+.alert
+    color: #ac8c55
+.alert a
+    color: #5f4922
+
+// New Message
+// ------------------------------------------------------------------------------
+
+#new-message
+    .box
+        padding: 15px
+    input
+        background: #f8f8f8
+        border-color: #dfdfdf
+        padding: 10px 15px
+        height: auto
+        box-shadow: none
+
+// Message
+// ------------------------------------------------------------------------------
+
+.message
+    margin-top: 15px
+    border-left: 3px solid transparent
+
+    .main
+        padding: 30px 30px 30px 27px
+
+    &.unread
+        border-left: 3px solid #8ec2b3
+
+    .avatar
+        size: 30px
+        border-radius: 15px
+
+    .details
+        display: inline-block
+        vertical-align: top
+        margin-top: -5px
+        padding-left: 15px
+
+        span.name
+            font-weight: bold
+            color: #444
+        span.time
+            display: block
+            font-size: 0.9em
+            color: #aaa
+
+    .body
+        padding-top: 25px
+        p
+            font-size: 18px
+        p:last-child
+            margin-bottom: -5px
+
+    .actions
+        float: right
+        margin-top: -5px
+        a
+          color: #8ec2b3
+          cursor: pointer
+        a.selected
+          color: #333
+        a i
+            margin-right: 7px
+
+.message > .comments
+    background: #fafafa
+
+.message > .comments > .new-comment
+    border-top: 1px solid #eee
+    padding: 15px
+    input
+        border: 1px solid #eee
+
+.message > .comments > .comment
+    border-top: 1px solid #eee
+    padding: 15px
+    position: relative
+    .avatar
+        position: absolute
+        size: 20px
+    .details
+        display: inline-block
+        padding-left: 35px
+    .name, .body
+        display: inline
+    .name
+        padding-right: 0.4em
+
+
+// Loader
+// ------------------------------------------------------------------------------
+
+.loader, .load-more
+    margin-top: 25px
+    display: block
+    padding: 20px
+    text-align: center
+    color: #aaa
+
+.loader
+    border: 1px solid #ddd
+    background: #f1f1f1
+    font-size: 22px
+    line-height: 22px
+
+.load-more
+    font-size: 16px
+    line-height: 23px
+    background: #f3f3f3
+    border: 1px dashed #ddd
+    cursor: pointer
+
+    &:hover
+        color: #666
+        text-decoration: none
+        border: 1px solid #ddd
+        background: #f1f1f1
+
+// Sidebar
+// ------------------------------------------------------------------------------
+
+#sidebar
+    padding: 60px 0 30px !important
+    color: #777
+
+#sidebar h2
+    background: #090909
+    padding: 25px 30px
+    margin: 0
+    font-size: 16px
+    font-weight: bold
+    border-top: 1px solid #222
+
+#sidebar .item
+    margin-left: 20px
+    padding: 20px 30px 20px 0
+    position: relative
+    .avatar
+        size: 30px
+        border-radius: 15px
+        position: absolute
+        left: 0px
+    .summary
+        padding-left: 40px
+    .name
+        font-weight: bold
+        color: #999
+        margin-right: 0.3em
+#sidebar .activity
+    .time
+        display: block
+        color: #555
+        font-size: 0.9em
+#sidebar .person
+    .joined
+        display: block
+        color: #555
+        font-size: 0.9em
+#sidebar .item + .item
+    border-top: 1px solid #222
+
+// Footer
+// ------------------------------------------------------------------------------
+
+#footer
+    background: #333
+    padding: 25px 30px
+    color: #777
+    a
+        color: #ccc
+
